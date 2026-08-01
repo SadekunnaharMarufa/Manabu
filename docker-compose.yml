@@ -9,9 +9,6 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-      - MONGO_URI=mongodb://db:27017/manabuu-db
-    depends_on:
-      - db
 
   frontend:
     build:
@@ -19,15 +16,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
-    depends_on:
-      - backend
-
-  db:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-
-volumes:
-  mongo-data:
