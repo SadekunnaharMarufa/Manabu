@@ -1,9 +1,11 @@
 {
-  "name": "manabu-backend",
+  "name": "manabuu-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Express AI Backend for Manabuu",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
